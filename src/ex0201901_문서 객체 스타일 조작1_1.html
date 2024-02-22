@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INDEX</title>
+	<meta charset="UTF-8">
+	
+	  <script>
+	  		window.onclick = function() {
+	  			// 문서 객체를 가져옵니다.
+	  			var header = document.getElementById('header');
+	  			
+	  			// 문서 객체의 스타일을 바꿔줍니다.
+	  			header.style.border = '2px solid black';
+	  			// ↑ 검은 테두리선 표기
+	  			header.style.color = 'orange';
+	  			// ↑ 글자색 표시
+	  			
+	  			/*
+	  			 CSS에서 background-color은 하이픈(-) 없애고
+	  			 			끊겨진 단어의 첫 글자를 대문자로 변경하면 됩니다.
+	  			 			예)background-color 		->  	backgroundColor
+	  			*/
+	  			header.style.backgroundColor = 'red';
+	  			// ↑ 배경 표시
+	  			
+	  			 // CSS에서의 속성 font-family => fontFamily
+	  			header.style.fontFamily = '굴림';
+	  			// ↑ 폰트 표시
+	  		};
+	  			
+	  </script>
+</head>
+<body>
+  <h1 id="header">Header</h1>
+</body>
+</html>

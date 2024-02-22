@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+#books caption { font-size: 14px;
+					 font-weight: bold;
+					 margin: 0.5em}
+	
+	/*
+	 table-layout 속성 : auto (각 열의 크기를 자동으로 계싼 - 기본값)
+	*/
+	
+	#books { border-collapse:collapse;
+			 width:500px;
+			 margin: 0 auto;
+			 text-align:center}
+	td,th,#books {
+			 /*border: 1px solid black;
+			 border-bottom:1px solid #444444;*/
+			 border-left:none;
+			 border-right:none;
+			 }
+			 
+	td {
+		border-bottom:1px solid #444444}
+			 
+	th {
+		color:white;
+		background-color:rgb(151, 151, 151);
+		border-top:none;
+		border-bottom:none;
+	}
+	
+	tr:hover {
+		background-color:rgb(197, 197, 197);
+	}
+</style>
+<title>표의 테두리 지정</title>
+</head>
+<body>
+	<script>
+	var saram = {
+			'name'		: "나최고",
+			"age"		: 25	,
+			ki			: 170.2	,
+			blood		: 'A'	,
+			address		: '서울시 강남구',
+			print		: function() {
+							var list="";
+							for(var p in saram) {
+									if(p != 'print')
+										list += p + '=' + saram[p] + "<br>";
+							}
+							document.body.innerHTML = list;
+			}
+	};
+	
+		var title1 = "항목 (속성: property)";
+		var title2 = "내용 (값: value)";
+		
+		var list = "<table id=books>";
+		list += "<caption> 신상정보 </caption>";
+		list += "<thead>";
+		list += "<tr>";
+		list += "<th> 항목 (속성: property) </th>";
+		list += "<th> 내용 (값:value) </th>";
+		list += "</tr>";
+		list += "</thead>";
+		list += "<tbody>";
+		list += "<tr> <td> saram.name </td> <td> " + saram.name + " </td> </tr>";
+		list += "<tr> <td> saram.age </td> <td> " + saram.age + "세 </td> </tr>";
+		list += "<tr> <td> saram.ki </td> <td> " + saram.ki + "cm </td> </tr>";
+		list += "<tr> <td> saram.blood </td> <td> " + saram.blood + "형 </td> </tr>";
+		list += "<tr> <td> sarama.address </td> <td> " + saram.address + " </td> </tr>";
+		list += "</tbody>";
+		list += "</table>";
+		
+		document.body.innerHTML = list;
+	</script>
+
+
+</body>
+</html>
